@@ -52,7 +52,7 @@ public class QueryService {
      * @return RespBean
      */
     private RespBean findStudent(Pageable pageable,String userId,String userName,String grade){
-        return RespBean.ok("成功",studentRepository.findAllByUserIdLikeAndUserNameLikeAndGradeLike(pageable,userId+"%",userName+"%",grade+"%"));
+        return RespBean.ok("成功",studentRepository.findAllByUserIdLikeAndUserNameLikeAndGradeLike(pageable,"%"+userId+"%","%"+userName+"%","%"+grade+"%"));
     }
 
     /**
@@ -63,7 +63,7 @@ public class QueryService {
      * @return RespBean
      */
     private RespBean findTeacher(Pageable pageable,String teacherId,String teacherName){
-        return  RespBean.ok("成功",teacherRepository.findAllByTeacherIdLikeAndTeacherNameLike(pageable,teacherId+"%",teacherName+"%"));
+        return  RespBean.ok("成功",teacherRepository.findAllByTeacherIdLikeAndTeacherNameLike(pageable,"%"+teacherId+"%","%"+teacherName+"%"));
     }
 
     /**
@@ -74,7 +74,7 @@ public class QueryService {
      * @return RespBean
      */
     private RespBean findExam(Pageable pageable,String examName,String examDate){
-        return  RespBean.ok("成功",examRepository.findAllByExamNameLikeAndExamDateLike(pageable,examName+"%",examDate+"%"));
+        return  RespBean.ok("成功",examRepository.findAllByExamNameLikeAndExamDateLike(pageable,"%"+examName+"%","%"+examDate+"%"));
     }
 
     /**
@@ -86,7 +86,7 @@ public class QueryService {
      * @return RespBean
      */
     private RespBean findResult(Pageable pageable,String examName,String userId,String classes){
-        return  RespBean.ok("成功",resultRepository.findAllByExamNameLikeAndUserIdLikeAndClassesLike(pageable,examName+"%",userId+"%",classes+"%"));
+        return  RespBean.ok("成功",resultRepository.findAllByExamNameLikeAndUserIdLikeAndClassesLike(pageable,"%"+examName+"%","%"+userId+"%","%"+classes+"%"));
     }
 
 }

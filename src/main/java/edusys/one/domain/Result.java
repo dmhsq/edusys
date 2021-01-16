@@ -27,6 +27,11 @@ public class Result {
     private String classes;
 
     /**
+     * 考试编号
+     */
+    private String examId;
+
+    /**
      * 考试名
      */
     private String examName;
@@ -50,6 +55,14 @@ public class Result {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getExamId() {
+        return examId;
+    }
+
+    public void setExamId(String examId) {
+        this.examId = examId;
     }
 
     public String getClasses() {
@@ -82,6 +95,7 @@ public class Result {
                 "userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", classes='" + classes + '\'' +
+                ", examId='" + examId + '\'' +
                 ", examName='" + examName + '\'' +
                 ", examResult='" + examResult + '\'' +
                 '}';

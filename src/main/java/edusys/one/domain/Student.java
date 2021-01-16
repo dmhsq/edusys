@@ -34,7 +34,7 @@ public class Student {
     /**
      * 老师
      */
-    private String teacher;
+    private String teacherName;
 
     /**
      * 老师手机号
@@ -88,12 +88,12 @@ public class Student {
         this.classes = classes;
     }
 
-    public String getTeacher() {
-        return teacher;
+    public String getTeacherName() {
+        return teacherName;
     }
 
-    public void setTeacher(String teacher) {
-        this.teacher = teacher;
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 
     public Integer getTeacherPhone() {
@@ -135,7 +135,7 @@ public class Student {
                 ", userName='" + userName + '\'' +
                 ", grade='" + grade + '\'' +
                 ", classes='" + classes + '\'' +
-                ", teacher='" + teacher + '\'' +
+                ", teacherName='" + teacherName + '\'' +
                 ", teacherPhone=" + teacherPhone +
                 ", contact='" + contact + '\'' +
                 ", contactPhone=" + contactPhone +
